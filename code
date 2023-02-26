@@ -1,0 +1,31 @@
+def bank(a, years, procent, top_up_amount):
+	z = a / 100
+	z_f = z * procent
+	for i in range(years - 1):
+		a += top_up_amount
+		f = a / 100
+		g = f * procent
+		z_f += g
+		h = z_f 		
+	print("$" + str(z_f + a))
+def bank2(qe, qa, qt):
+	g = qe / 100
+	n = g * qt
+	l = n * qa
+	b = qe + l
+	print("$" + str(b))
+
+
+q = input("Do you want a result with the replenishment amount? (y, n):")
+if q == "y":
+	a = int(input("Initial deposit:"))
+	years = int(input("For how many years:"))
+	procent = int(input("What percentage:"))
+	top_up_amount = int(input("Top-up amount:"))
+	bank(a, years, procent, top_up_amount)
+else:
+	qe = int(input("Initial deposit:"))
+	qa = int(input("For how many years:"))
+	qt = int(input("What percentage:"))
+	bank2(qe, qa, qt)
+input()
